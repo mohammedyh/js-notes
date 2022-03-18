@@ -10,7 +10,7 @@ const clearAllBtn = document.querySelector('[data-clear]');
 let notes: string[] = [];
 
 form?.addEventListener('submit', handleSubmit);
-searchInput?.addEventListener('keyup', filterNotes);
+searchInput?.addEventListener('input', filterNotes);
 notesWrapper?.addEventListener('click', deleteNote);
 clearAllBtn?.addEventListener('click', clearAllNotes);
 
