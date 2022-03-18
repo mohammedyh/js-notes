@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+			integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>JS Notes</title>
+		<style>
+			body {
+				counter-reset: title;
+			}
+
+			.title::after {
+				counter-increment: title;
+				content: ' ' counter(title);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p-4 container is-max-desktop">
+			<div
+				class="mt-4 is-flex is-align-items-center is-justify-content-space-between"
+			>
+				<h1 class="is-size-2 has-text-weight-semibold is-size-4-mobile">Notes App</h1>
+				<div class="field">
+					<p class="control has-icons-left has-icons-right">
+						<input
+							class="input"
+							type="text"
+							placeholder="Search Notes"
+							data-search
+						/>
+						<span class="icon is-small is-left">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								fill="currentColor"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+								/>
+							</svg>
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<div class="mt-4 card">
+				<header class="card-header is-align-items-center">
+					<h1 class="card-header-title is-size-4 has-text-weight-semibold">Add a note</h1>
+					<button
+						class="card-header-icon button mr-5 is-light is-danger is-hidden"
+						data-clear
+					>
+						Clear all
+					</button>
+				</header>
+
+				<div class="card-content">
+					<form class="container is-flex" data-form>
+						<!-- <textarea
+							style="min-width: auto; min-height: 2.5em;"
+							class="textarea mb-1 is-primary"
+							name="note"
+							placeholder="Notes"
+							tabindex="1"
+						></textarea> -->
+						<input
+							type="text"
+							class="input mb-1"
+							placeholder="Notes"
+							name="note"
+							tabindex="1"
+							data-input
+						/>
+						<div class="ml-2 control">
+							<button class="button is-primary" tabindex="2">Submit</button>
+						</div>
+					</form>
+
+					<div class="has-text-danger" data-error></div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div
+				style="width: fit-content; margin: 0 auto"
+				class="px-5 py-3 is-hidden"
+				data-empty
+			>
+				<div class="px-5 notification is-link is-light has-text-centered">
+					<h3 class="is-size-5 has-text-weight-bold" data-empty-text>
+						You don't have any notes yet
+					</h3>
+				</div>
+			</div>
+
+			<div class="columns is-multiline"></div>
+		</div>
+
+		<script src="./dist/main.js"></script>
+	</body>
+</html>

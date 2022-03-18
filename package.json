@@ -1,0 +1,16 @@
+{
+  "name": "js-notes",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "deploy": "tsc && gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "typescript": "^4.6.2"
+  }
+}
