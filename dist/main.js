@@ -9,7 +9,7 @@ const searchInput = document.querySelector('[data-search]');
 const clearAllBtn = document.querySelector('[data-clear]');
 let notes = [];
 form === null || form === void 0 ? void 0 : form.addEventListener('submit', handleSubmit);
-searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventListener('keyup', filterNotes);
+searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventListener('input', filterNotes);
 notesWrapper === null || notesWrapper === void 0 ? void 0 : notesWrapper.addEventListener('click', deleteNote);
 clearAllBtn === null || clearAllBtn === void 0 ? void 0 : clearAllBtn.addEventListener('click', clearAllNotes);
 loadNotes();
